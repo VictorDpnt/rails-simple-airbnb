@@ -1,0 +1,17 @@
+<h1 class="text-center">All flats</h1>
+
+<div class="row justify-content-center">
+<% @flats.each do |flat| %>
+  <div class="card m-3" style="width: 18rem;">
+  <img class="card-img-top" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/8bc05981988591.5d107cb99ca6c.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= flat.name %></h5>
+    <p class="card-text"> <em><%= flat.address %></em> </p>
+    <p class="card-text"><%= flat.price_per_night %> €</p>
+    <p class="card-text"><%= flat.description %></p>
+    <button class="btn btn-warning"><%= link_to "En savoir plus", flat_path(flat) %></button>
+
+  </div>
+</div>
+<% end %>
+</div>
